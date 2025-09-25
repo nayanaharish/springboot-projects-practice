@@ -9,7 +9,7 @@ public class StartCar {
 
     Good to see the difference with DI examples (XML or Annotation).*/
 
-    
+
     public static void main(String[] args) {
         Car car = new Car(new Engine());
         car.drive();

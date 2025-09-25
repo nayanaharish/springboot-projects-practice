@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for Engine -->
+    <bean id="engine" class="org.example.springbootpractice.With_DI_XMLBased.Engine"/>
+
+    <!-- Bean definition for Car with constructor injection -->
+    <bean id="car" class="org.example.springbootpractice.With_DI_XMLBased.Car">
+        <constructor-arg ref="engine"/>
+    </bean>
+
+</beans>
