@@ -1,0 +1,31 @@
+package org.example.springbootpractice.With_DI_AnnotationBased;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class BillCollector {
+
+    Payment payment;
+
+
+    @Autowired
+    public BillCollector(Payment payment) {
+        this.payment = payment;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+
+    public void collectBill() {
+        payment.pay();
+        System.out.println("Bill collected");
+
+    }
+}
