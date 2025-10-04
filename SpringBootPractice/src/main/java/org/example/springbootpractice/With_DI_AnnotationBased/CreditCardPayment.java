@@ -2,11 +2,11 @@ package org.example.springbootpractice.With_DI_AnnotationBased;
 
 import org.springframework.stereotype.Component;
 
-@Component("debitCardPayment")
-public class DebitCardPayment  implements Payment{
+@Component("creditCardPayment")
+public class CreditCardPayment implements Payment{
 
     @Override
     public void pay() {
-        System.out.println("Debit Card Payment Method");
+        System.out.println("Payment credit card");
     }
 }
