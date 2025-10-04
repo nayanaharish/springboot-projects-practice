@@ -11,7 +11,8 @@ public class BillCollector {
 
 
     @Autowired
-    public BillCollector(@Qualifier("debitCardPayment") Payment payment) {
+//    public BillCollector(@Qualifier("debitCardPayment") Payment payment) {
+    public BillCollector(Payment payment) { //removed @Qualifier to test @Primary annotation ,default one
         this.payment = payment;
     }
 
